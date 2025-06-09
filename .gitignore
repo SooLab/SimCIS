@@ -8,7 +8,6 @@ instant_test_output
 inference_test_output
 env.sh
 json/
-datasets/*
 detectron2
 
 *.png
