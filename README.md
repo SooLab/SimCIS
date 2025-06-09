@@ -35,6 +35,7 @@ pip install -U opencv-python
 git clone git@github.com:SooLab/SimCIS.git
 cd SimCIS
 
+git clone git@github.com:facebookresearch/detectron2.git
 cd detectron2
 pip install -e .
 pip install git+https://github.com/cocodataset/panopticapi.git
