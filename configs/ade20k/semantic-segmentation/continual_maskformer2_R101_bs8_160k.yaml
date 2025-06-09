@@ -1,0 +1,18 @@
+_BASE_: maskformer2_R101_bs16_160k.yaml
+INPUT:
+  DATASET_MAPPER_NAME: "continual_semantic"
+DATASETS:
+  TRAIN: ("current_ade20k_sem_seg_train",)
+  TEST: ("current_ade20k_sem_seg_val",)
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.0001
+  CHECKPOINT_PERIOD: 10000
+CONT:
+  SETTING: "overlapped"
+  MED_TOKENS_WEIGHT: 5.0
+  MEMORY: False
+  KL_ALL: False
+  COMBINE_PSDLABEL: True
+TEST:
+  EVAL_PERIOD: 5000

@@ -1,0 +1,18 @@
+_BASE_: continual_maskformer2_R50_bs8_160k.yaml
+CONT:
+  TOT_CLS: 150
+  BASE_CLS: 100
+  INC_CLS: 10
+  TASK: 1
+  VQ_NUMBER: 1
+  LIB_SIZE: 80
+  PSD_LABEL_THRESHOLD: 0.35
+  FREEZE_LABEL: False
+  KL_WEIGHT : 2.0
+  KL_ALL : True
+  KD_DECODER: False
+  KD_TEMPERATURE : 1.0
+  KD_TEMPERATURE2 : 1.0
+SOLVER:
+  STEPS: (8500, 9500)
+OUTPUT_DIR: ./output/ps/100-10/step1
