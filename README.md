@@ -11,6 +11,7 @@ By [Yuchen Zhu*](https://github.com/ZhuYuChenNO1), [Cheng Shi*](https://chengshi
 
 ## 📣 News
 
+* [2025.06.17] 🤗 🤗 🤗 We Release the weights on [huggingface](https://huggingface.co/LightningNO1/SimCIS). 
 * [2025.06.09] 🤗 We fully release SimCIS, including both code and [paper](./assets/CVPR_2025_SimCIS.pdf)!
 * [2025.03.03] We are preparing the code and camera ready version of our paper!
 * [2025.02.27] Our paper is accepted by CVPR2025!
@@ -19,8 +20,8 @@ By [Yuchen Zhu*](https://github.com/ZhuYuChenNO1), [Cheng Shi*](https://chengshi
 ## 📝 To-do list
 
 - [x] Release the code and paper.
-- [ ] Release the weights in the next few days.
-- [ ] More detailed instructions.
+- [x] Release the weights in the next few days.
+- [x] More detailed instructions.
 
 
 ## 💡 Quick Start
@@ -96,6 +97,9 @@ python continual/prepare_datasets.py
 ```
 
 ## 🔥 Training 
+
+Download the weights of the base step(step1) from [huggingface](https://huggingface.co/LightningNO1/SimCIS). 
+
 Please follow the [scripts](./scripts) to train SimCIS!
 
 For example:
@@ -105,6 +109,9 @@ bash scripts/pan_100-5.sh
 ```
 
 ## ⚡️ Evaluation
+
+Download the weights from [huggingface](https://huggingface.co/LightningNO1/SimCIS). 
+
 Please follow the [scripts](./scripts) to evaluate SimCIS!
 
 For example:
@@ -114,6 +121,22 @@ For example:
 bash scripts/panoptic_eval.sh 11
 ```
 
+
+## 📖 Cite Us
+If you find this repository useful in your research, please consider giving a star ⭐ and a citation
+```bibtex
+@inproceedings{zhu2025rethinking,
+  title={Rethinking Query-based Transformer for Continual Image Segmentation},
+  author={Zhu, Yuchen and Shi, Cheng and Wang, Dingyou and Tang, Jiajin and Wei, Zhengxuan and Wu, Yu and Li, Guanbin and Yang, Sibei},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={4595--4606},
+  year={2025}
+}
+```
+
+
 ## 👍 Acknowledgement and Related Work
 * This code is mainly based on [Mask2Former](https://github.com/facebookresearch/Mask2Former). We thank them for their excellent work.
 * Related work for continual image segmentation: [Balconpas](https://github.com/jinpeng0528/BalConpas/tree/master), [ECLIPSE](https://github.com/clovaai/ECLIPSE). We appreciate the contributions of these researchers.
+
+
